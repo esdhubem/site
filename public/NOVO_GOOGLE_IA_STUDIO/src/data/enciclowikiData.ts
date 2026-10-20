@@ -37,7 +37,13 @@ export interface EnciclowikiVerbete {
     estrutura: string; // Como é?
   };
 
-  // Texto Fluido Estilo Wikipedia (500 a 800 palavras)
+  // Modelo da postagem: 'aluno-bronze' (simples, 500-800 caracteres) ou 'escola-completo' (canônico 500-800 palavras)
+  tipoModelo?: 'aluno-bronze' | 'escola-completo';
+
+  // Texto do Aluno Bronze (1 parágrafo conciso de 500 a 800 caracteres)
+  textoAlunoParagrafo?: string;
+
+  // Texto Fluido Estilo Wikipedia da Escola (500 a 800 palavras)
   textoWikiHtml: string;
 
   citacaoAbnt: string;
