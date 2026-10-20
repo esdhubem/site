@@ -4,20 +4,17 @@ import {
   BookOpen,
   Copy,
   Check,
-  Share2,
-  Clock,
-  Tag,
-  ShieldCheck,
   ExternalLink,
   ChevronRight,
   GraduationCap,
   Sparkles,
-  Layers,
-  HeartPulse,
+  Info,
+  Award,
+  User,
   Compass,
-  Microscope,
-  Network,
-  Users
+  FileText,
+  Search,
+  List
 } from 'lucide-react';
 import { ENCICLOWIKI_VERBETES, EnciclowikiVerbete } from '../data/enciclowikiData';
 
@@ -35,6 +32,7 @@ export const EnciclowikiArticlePage: React.FC<EnciclowikiArticlePageProps> = ({
   onNavigate
 }) => {
   const [copiado, setCopiado] = useState(false);
+  const [mostrarIndice, setMostrarIndice] = useState(true);
 
   const verbete = ENCICLOWIKI_VERBETES.find(v => v.id === verbeteId) || ENCICLOWIKI_VERBETES[0];
 
@@ -44,287 +42,361 @@ export const EnciclowikiArticlePage: React.FC<EnciclowikiArticlePageProps> = ({
     setTimeout(() => setCopiado(false), 2500);
   };
 
-  const renderIconCategoria = (catId: string) => {
-    switch (catId) {
-      case 'saude-integrativa':
-        return <HeartPulse className="w-4 h-4 text-emerald-400" />;
-      case 'desenvolvimento-humano':
-        return <Compass className="w-4 h-4 text-blue-400" />;
-      case 'ciencia-cidada':
-        return <Microscope className="w-4 h-4 text-indigo-400" />;
-      case 'tecnologia-escrever':
-        return <Network className="w-4 h-4 text-amber-400" />;
-      case 'bem-estar-social':
-        return <Users className="w-4 h-4 text-rose-400" />;
-      default:
-        return <BookOpen className="w-4 h-4 text-sky-400" />;
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-100 py-10">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+    <div className="min-h-screen bg-[#f8f9fa] text-[#202122] font-sans antialiased py-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        
         {/* ======================================================== */}
-        {/* BREADCRUMB & BOTÃO VOLTAR */}
+        {/* BARRA SUPERIOR DE NAVEGAÇÃO & BREADCRUMB */}
         {/* ======================================================== */}
-        <div className="flex items-center justify-between gap-4 mb-8">
-          <button
-            onClick={onBack}
-            className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-400 hover:text-cyan-400 transition-colors cursor-pointer group"
-          >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            <span>Voltar para a Enciclowiki</span>
-          </button>
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-3 border-b border-slate-300 text-xs sm:text-sm">
+          <div className="flex items-center gap-2">
+            <button
+              onClick={onBack}
+              className="inline-flex items-center gap-1.5 font-semibold text-[#0645ad] hover:text-[#0b0080] hover:underline cursor-pointer group"
+            >
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
+              <span>← Voltar ao Índice da Enciclowiki</span>
+            </button>
+            <span className="text-slate-400">|</span>
+            <button
+              onClick={() => onNavigate('diretrizes-pedagogicas')}
+              className="hidden sm:inline-flex items-center gap-1 text-slate-600 hover:text-[#0645ad] hover:underline cursor-pointer"
+            >
+              <GraduationCap className="w-3.5 h-3.5 text-slate-500" />
+              <span>Diretrizes Pedagógicas</span>
+            </button>
+          </div>
 
-          <nav className="hidden sm:flex items-center gap-1.5 text-xs text-slate-500">
-            <button onClick={() => onNavigate('inicio')} className="hover:text-slate-300">Início</button>
-            <ChevronRight className="w-3 h-3" />
-            <button onClick={onBack} className="hover:text-slate-300">Enciclowiki</button>
-            <ChevronRight className="w-3 h-3" />
-            <span className="text-cyan-400 truncate max-w-[180px]">{verbete.termo}</span>
-          </nav>
+          <div className="flex items-center gap-1 text-xs text-slate-500">
+            <span className="cursor-pointer hover:underline text-[#0645ad]" onClick={() => onNavigate('inicio')}>Início</span>
+            <span>/</span>
+            <span className="cursor-pointer hover:underline text-[#0645ad]" onClick={onBack}>Enciclowiki</span>
+            <span>/</span>
+            <span className="text-slate-700 font-medium truncate max-w-[160px] sm:max-w-[260px]">{verbete.termo}</span>
+          </div>
         </div>
 
         {/* ======================================================== */}
-        {/* CABEÇALHO DO VERBETE */}
+        {/* AVISO INSTITUCIONAL: PUBLICAÇÃO AUTORAL DE ALUNO BRONZE */}
         {/* ======================================================== */}
-        <header className="bg-slate-800/80 border border-slate-700/80 rounded-3xl p-6 sm:p-10 mb-8 shadow-xl">
-          <div className="flex flex-wrap items-center gap-2.5 mb-4">
-            <span className="text-xs font-semibold px-3 py-1 rounded-full bg-slate-900 text-slate-300 border border-slate-700 flex items-center gap-1.5">
-              {renderIconCategoria(verbete.categoriaId)}
-              <span>{verbete.categoriaNome}</span>
-            </span>
-
-            <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">
-              Nível: {verbete.nivel}
-            </span>
-
-            <span className="text-xs text-slate-400 flex items-center gap-1 ml-auto">
-              <Clock className="w-3.5 h-3.5" />
-              <span>{verbete.tempoLeitura} de leitura</span>
-            </span>
-          </div>
-
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight mb-4 leading-tight">
-            {verbete.termo}
-          </h1>
-
-          {verbete.etimologiaOuOrigem && (
-            <p className="text-xs sm:text-sm text-cyan-300/90 font-mono bg-cyan-950/40 border border-cyan-800/40 rounded-xl px-4 py-2.5 mb-6">
-              <strong>Etimologia & Origem:</strong> {verbete.etimologiaOuOrigem}
-            </p>
-          )}
-
-          {/* Featured Snippet (Definição Rápida) */}
-          <div className="p-5 sm:p-6 rounded-2xl bg-emerald-950/40 border-l-4 border-emerald-500 shadow-inner">
-            <h2 className="text-xs font-black uppercase tracking-wider text-emerald-400 mb-2 flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Síntese Enciclopédica (Definição Rápida)</span>
-            </h2>
-            <p className="text-sm sm:text-base text-emerald-100/95 font-medium leading-relaxed m-0">
-              {verbete.resumoDireto}
-            </p>
-          </div>
-
-          {/* Metadados do Autor e Data */}
-          <div className="flex flex-wrap items-center justify-between gap-4 mt-6 pt-6 border-t border-slate-700/60 text-xs text-slate-400">
-            <div>
-              <span className="text-slate-500">Verbete catalogado por: </span>
-              <strong className="text-slate-200">{verbete.autor}</strong>
+        <div className="mb-6 p-4 bg-amber-50/70 border-l-4 border-amber-600 border-t border-r border-b border-amber-200/80 rounded-r-md text-xs sm:text-sm text-slate-800 shadow-2xs">
+          <div className="flex items-start gap-3">
+            <div className="w-7 h-7 rounded-full bg-amber-600/15 text-amber-800 font-black flex items-center justify-center shrink-0 mt-0.5">
+              <Award className="w-4 h-4 text-amber-700" />
             </div>
-            <div>
-              <span>Última revisão: </span>
-              <strong className="text-slate-300">{verbete.dataAtualizacao}</strong>
+            <div className="flex-1 leading-relaxed">
+              <div className="flex flex-wrap items-center gap-2 mb-1">
+                <span className="font-bold text-amber-900 tracking-tight">Publicação Autoral de Aluno(a) — Certificação Mérito Bronze</span>
+                <span className="px-2 py-0.5 rounded-full bg-amber-200 text-amber-900 text-[10px] font-black uppercase tracking-wider">
+                  Nível Bronze ESDHUBEM
+                </span>
+              </div>
+              <p className="text-slate-700 text-xs sm:text-sm m-0">
+                Este verbete é uma produção conceitual independente desenvolvida por estudante com <strong>Certificação Nível Bronze</strong> da ESDHUBEM (Mérito de Autoria Conceitual de 500 a 800 palavras). Na ESDHUBEM, a Enciclowiki constitui o repositório formativo de ciência cidadã onde verbetes pioneiros são catalogados para democratizar o saber com integridade ética e fundamentação filosófica.
+              </p>
+              
+              <div className="mt-2.5 pt-2 border-t border-amber-200/80 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
+                <span>
+                  <strong>Autor(a):</strong> {verbete.autorNome}
+                </span>
+                <span className="text-slate-400">•</span>
+                <span>
+                  <strong>Profissão:</strong> {verbete.autorProfissao}
+                </span>
+                {verbete.autorPerfilUrl && (
+                  <>
+                    <span className="text-slate-400">•</span>
+                    <a
+                      href={verbete.autorPerfilUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#0645ad] hover:underline font-semibold inline-flex items-center gap-1"
+                    >
+                      <span>Perfil / Site Pessoal</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </>
+                )}
+              </div>
             </div>
           </div>
-        </header>
+        </div>
 
         {/* ======================================================== */}
-        {/* CORPO DO ARTIGO ENCICLOPÉDICO */}
+        {/* SUPERFÍCIE PRINCIPAL DE LEITURA (ESTILO WIKIPEDIA CLÁSSICA) */}
         {/* ======================================================== */}
-        <div className="space-y-8">
-          {/* Seção 1: Definição Conceitual Fundamentada */}
-          <section className="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-6 sm:p-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 flex items-center gap-2">
-              <span className="w-7 h-7 rounded-lg bg-blue-600/30 text-blue-400 text-sm font-black flex items-center justify-center">1</span>
-              <span>Definição Conceitual & Fundamentação</span>
-            </h2>
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              {verbete.conteudo.definicao}
+        <article className="bg-white border border-[#a2a9b1] rounded-xs p-6 sm:p-10 shadow-xs relative">
+          
+          {/* Cabeçalho do Verbete: H1 Clássico com Linha Divisória */}
+          <header className="mb-6 border-b border-[#a2a9b1] pb-2">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-[#000000] font-normal tracking-tight mb-1">
+              {verbete.termo}
+            </h1>
+            <p className="text-xs text-slate-500 italic m-0">
+              Origem: Enciclowiki ESDHUBEM, a enciclopédia livre do desenvolvimento humano e bem-estar social.
             </p>
-          </section>
+          </header>
 
-          {/* Seção 2: Contexto Histórico e Científico */}
-          <section className="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-6 sm:p-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 flex items-center gap-2">
-              <span className="w-7 h-7 rounded-lg bg-blue-600/30 text-blue-400 text-sm font-black flex items-center justify-center">2</span>
-              <span>Contexto Histórico & Científico</span>
-            </h2>
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              {verbete.conteudo.historico}
+          {/* ======================================================== */}
+          {/* FICHA TÉCNICA LATERAL (WIKIPEDIA INFOBOX) */}
+          {/* ======================================================== */}
+          <aside className="sm:float-right sm:w-80 sm:ml-6 sm:mb-6 mb-6 border border-[#a2a9b1] bg-[#f8f9fa] rounded-xs text-xs text-slate-800 shadow-2xs">
+            {/* Topo do Infobox */}
+            <div className="bg-[#eaecf0] border-b border-[#a2a9b1] px-3 py-2 text-center font-bold font-serif text-sm text-[#202122]">
+              {verbete.termo}
+            </div>
+
+            {/* Linhas da Ficha Técnica */}
+            <div className="p-3 divide-y divide-slate-200">
+              
+              {/* Eixo Temático */}
+              <div className="py-2 flex flex-col gap-0.5">
+                <span className="font-bold text-slate-600 text-[11px] uppercase tracking-wider">Eixo Temático</span>
+                <span className="font-medium text-[#0645ad]">{verbete.categoriaNome}</span>
+              </div>
+
+              {/* Autoria e Selo */}
+              <div className="py-2 flex flex-col gap-0.5">
+                <span className="font-bold text-slate-600 text-[11px] uppercase tracking-wider">Autoria & Certificação</span>
+                <div className="font-medium text-slate-900">{verbete.autorNome}</div>
+                <div className="text-[11px] text-slate-600">{verbete.autorProfissao}</div>
+                <div className="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 mt-0.5">
+                  <Award className="w-3 h-3 text-amber-600" />
+                  <span>Selo Aluno(a) Bronze ESDHUBEM</span>
+                </div>
+                {verbete.autorPerfilUrl && (
+                  <a
+                    href={verbete.autorPerfilUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#0645ad] hover:underline text-[11px] font-medium inline-flex items-center gap-1 mt-1"
+                  >
+                    <span>Ver perfil / portfólio ↗</span>
+                  </a>
+                )}
+              </div>
+
+              {/* Enquadramento Filosófico (Kant e os 3 Verbos) */}
+              <div className="py-2 flex flex-col gap-1.5 bg-amber-50/40 -mx-3 px-3">
+                <span className="font-bold text-amber-900 text-[11px] uppercase tracking-wider flex items-center gap-1">
+                  <Compass className="w-3.5 h-3.5 text-amber-700" />
+                  <span>Enquadramento Filosófico</span>
+                </span>
+                
+                <div className="space-y-1 text-[11px]">
+                  <div>
+                    <strong className="text-slate-700">Questão de Kant:</strong>{' '}
+                    <span className="text-slate-900 italic">{verbete.filosofia.questaoKant}</span>
+                  </div>
+                  <div>
+                    <strong className="text-slate-700">Pilar Disciplinar:</strong>{' '}
+                    <span className="text-slate-900">{verbete.filosofia.pilarDisciplinar}</span>
+                  </div>
+                  <div className="pt-1 border-t border-amber-200/60 mt-1">
+                    <span className="font-bold text-slate-700 block mb-0.5">Tríade Clássica:</span>
+                    <ul className="list-disc list-inside space-y-0.5 text-slate-800 pl-1">
+                      <li><strong>O que é? (Essência):</strong> {verbete.filosofia.essencia}</li>
+                      <li><strong>Por que é? (Causa):</strong> {verbete.filosofia.causa}</li>
+                      <li><strong>Como é? (Estrutura):</strong> {verbete.filosofia.estrutura}</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Etimologia / Origem */}
+              {verbete.etimologiaOuOrigem && (
+                <div className="py-2 flex flex-col gap-0.5">
+                  <span className="font-bold text-slate-600 text-[11px] uppercase tracking-wider">Etimologia & Origem</span>
+                  <span className="text-slate-700 text-[11px] leading-relaxed">{verbete.etimologiaOuOrigem}</span>
+                </div>
+              )}
+
+              {/* Metadados Técnicos */}
+              <div className="py-2 flex flex-col gap-1 text-[11px] text-slate-600">
+                <div><strong>Data de Publicação:</strong> {verbete.dataPublicacao}</div>
+                <div><strong>Extensão / Leitura:</strong> {verbete.tempoLeitura} (~500 a 800 palavras)</div>
+                <div><strong>Status:</strong> Verbete Canônico Aprovado</div>
+              </div>
+            </div>
+          </aside>
+
+          {/* Resumo Rápido (Lead Paragraph) */}
+          <div className="text-base text-slate-800 leading-relaxed font-sans mb-6">
+            <p className="m-0 text-justify">
+              <strong className="font-bold text-slate-900">{verbete.termo}</strong> — {verbete.resumoDireto}
             </p>
-          </section>
+          </div>
 
-          {/* Seção 3: Princípios Operacionais e Funcionamento */}
-          <section className="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-6 sm:p-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 flex items-center gap-2">
-              <span className="w-7 h-7 rounded-lg bg-blue-600/30 text-blue-400 text-sm font-black flex items-center justify-center">3</span>
-              <span>Princípios Estruturais & Funcionamento</span>
+          {/* ======================================================== */}
+          {/* SUMÁRIO / ÍNDICE (ESTILO WIKIPEDIA TOC) */}
+          {/* ======================================================== */}
+          <nav className="inline-block my-4 p-3 bg-[#f8f9fa] border border-[#a2a9b1] rounded-xs min-w-[240px] text-xs">
+            <div className="flex items-center justify-between gap-4 font-bold text-slate-800 border-b border-slate-300 pb-1 mb-2">
+              <span className="flex items-center gap-1.5">
+                <List className="w-3.5 h-3.5 text-slate-600" />
+                <span>Índice</span>
+              </span>
+              <button
+                onClick={() => setMostrarIndice(!mostrarIndice)}
+                className="text-[#0645ad] hover:underline font-normal text-[11px] cursor-pointer"
+              >
+                [{mostrarIndice ? 'ocultar' : 'mostrar'}]
+              </button>
+            </div>
+
+            {mostrarIndice && (
+              <ol className="list-decimal list-inside space-y-1 text-[#0645ad] font-sans">
+                <li>
+                  <a href="#origem-fundamentacao" className="hover:underline">Origem e Fundamentação</a>
+                </li>
+                <li>
+                  <a href="#principios-estruturais" className="hover:underline">Princípios Estruturais (Como se Constrói / Funciona)</a>
+                </li>
+                <li>
+                  <a href="#dimensao-etica-pratica" className="hover:underline">Dimensão Ética e Aplicação</a>
+                </li>
+                <li>
+                  <a href="#ver-tambem" className="hover:underline">Ver também</a>
+                </li>
+                <li>
+                  <a href="#como-citar" className="hover:underline">Como citar este verbete (ABNT)</a>
+                </li>
+                <li>
+                  <a href="#referencias" className="hover:underline">Referências e Bibliografia</a>
+                </li>
+              </ol>
+            )}
+          </nav>
+
+          {/* ======================================================== */}
+          {/* TEXTO WIKI FLUIDO (CORPO CONTÍNUO DE 500 A 800 PALAVRAS) */}
+          {/* ======================================================== */}
+          <div
+            className="wiki-content text-slate-800 leading-relaxed text-base font-sans mt-4 clear-both sm:clear-none"
+            dangerouslySetInnerHTML={{ __html: verbete.textoWikiHtml }}
+          />
+
+          <div className="clear-both" />
+
+          {/* ======================================================== */}
+          {/* SEÇÃO: VER TAMBÉM (LINKS WIKIPEDIA) */}
+          {/* ======================================================== */}
+          <section id="ver-tambem" className="mt-10 pt-4 border-t border-[#a2a9b1]">
+            <h2 className="text-xl font-serif font-normal text-slate-900 border-b border-slate-300 pb-1 mb-3">
+              Ver também
             </h2>
-            <ul className="space-y-3">
-              {verbete.conteudo.principios.map((principio, idx) => (
-                <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-slate-300">
-                  <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2 shrink-0" />
-                  <span>{principio}</span>
+            <ul className="list-disc list-inside space-y-1.5 text-sm text-[#0645ad]">
+              {verbete.verbetesRelacionados.map(rel => (
+                <li key={rel.id}>
+                  <button
+                    onClick={() => onSelectVerbete(rel.id)}
+                    className="hover:underline text-left cursor-pointer inline-flex items-center gap-1"
+                  >
+                    <span>{rel.termo}</span>
+                    <span className="text-slate-500 text-xs font-normal">({rel.categoriaNome})</span>
+                  </button>
                 </li>
               ))}
             </ul>
           </section>
 
-          {/* Seção 4: Impacto Biopsicossocial */}
-          <section className="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-6 sm:p-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 flex items-center gap-2">
-              <span className="w-7 h-7 rounded-lg bg-blue-600/30 text-blue-400 text-sm font-black flex items-center justify-center">4</span>
-              <span>Impacto Biopsicossocial & Relevância</span>
-            </h2>
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              {verbete.conteudo.impactoBiopsicossocial}
-            </p>
-          </section>
-
-          {/* Seção 5: Aplicações Práticas */}
-          <section className="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-6 sm:p-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 flex items-center gap-2">
-              <span className="w-7 h-7 rounded-lg bg-blue-600/30 text-blue-400 text-sm font-black flex items-center justify-center">5</span>
-              <span>Aplicações Práticas no Estudo, Pesquisa e Cotidiano</span>
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {verbete.conteudo.aplicacoes.map((app, idx) => (
-                <div key={idx} className="p-4 rounded-xl bg-slate-900/60 border border-slate-700/60 flex items-start gap-2.5">
-                  <span className="text-cyan-400 font-bold text-xs mt-0.5">✦</span>
-                  <p className="text-xs sm:text-sm text-slate-300 m-0 leading-relaxed">{app}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Pontos de Atenção / Limitações (se houver) */}
-          {verbete.conteudo.pontosAtencao && (
-            <section className="p-6 rounded-2xl bg-amber-950/30 border border-amber-500/40">
-              <h3 className="text-sm font-bold text-amber-300 uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                <span>⚠️ Pontos de Atenção & Delimitação de Uso</span>
-              </h3>
-              <p className="text-xs sm:text-sm text-amber-100/90 leading-relaxed m-0">
-                {verbete.conteudo.pontosAtencao}
-              </p>
-            </section>
-          )}
-
           {/* ======================================================== */}
-          {/* VERBETES RELACIONADOS (NAVEGAÇÃO EM TEIA) */}
+          {/* SEÇÃO: COMO CITAR ESTE VERBETE (ABNT NBR 6023) */}
           {/* ======================================================== */}
-          <section className="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-6 sm:p-8">
-            <h3 className="text-sm font-bold text-slate-300 uppercase tracking-wider mb-4 flex items-center gap-2">
-              <Layers className="w-4 h-4 text-cyan-400" />
-              <span>Verbetes e Conceitos Conectados</span>
-            </h3>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              {verbete.verbetesRelacionados.map(rel => (
-                <button
-                  key={rel.id}
-                  onClick={() => onSelectVerbete(rel.id)}
-                  className="p-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-900 border border-slate-700/80 hover:border-cyan-400/60 text-left transition-all cursor-pointer group"
-                >
-                  <div className="text-[10px] text-slate-400 uppercase font-semibold mb-1 truncate">{rel.categoriaNome}</div>
-                  <div className="text-xs font-bold text-white group-hover:text-cyan-300 transition-colors flex items-center justify-between">
-                    <span className="truncate">{rel.termo}</span>
-                    <ChevronRight className="w-3.5 h-3.5 text-cyan-400 shrink-0 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </button>
-              ))}
-            </div>
-          </section>
-
-          {/* ======================================================== */}
-          {/* CAIXA DE CITAÇÃO ABNT (COPIAR COM 1 CLIQUE) */}
-          {/* ======================================================== */}
-          <section className="bg-slate-900 border-2 border-dashed border-cyan-500/40 rounded-2xl p-6">
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-black uppercase tracking-wider text-cyan-400 flex items-center gap-1.5">
-                <BookOpen className="w-4 h-4" />
-                <span>Como Citar este Verbete (Padrão ABNT NBR 6023)</span>
-              </span>
-
+          <section id="como-citar" className="mt-8 pt-4 border-t border-[#a2a9b1]">
+            <div className="flex items-center justify-between gap-2 mb-2">
+              <h2 className="text-xl font-serif font-normal text-slate-900 m-0">
+                Como citar este verbete
+              </h2>
               <button
                 onClick={handleCopiarCitacao}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-400/40 text-cyan-300 text-xs font-bold transition-all cursor-pointer shadow-xs active:scale-95"
+                className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#eaecf0] hover:bg-[#dfe3e8] border border-[#a2a9b1] text-xs font-medium text-slate-800 rounded-xs transition-colors cursor-pointer"
+                title="Copiar citação ABNT para a área de transferência"
               >
                 {copiado ? (
                   <>
-                    <Check className="w-3.5 h-3.5 text-emerald-400" />
-                    <span className="text-emerald-300">Citação Copiada!</span>
+                    <Check className="w-3.5 h-3.5 text-emerald-600" />
+                    <span className="text-emerald-700 font-bold">Copiado!</span>
                   </>
                 ) : (
                   <>
-                    <Copy className="w-3.5 h-3.5" />
-                    <span>Copiar Citação ABNT</span>
+                    <Copy className="w-3.5 h-3.5 text-slate-600" />
+                    <span>Copiar ABNT NBR 6023</span>
                   </>
                 )}
               </button>
             </div>
 
-            <p className="text-xs text-slate-300 font-mono bg-slate-950/70 p-4 rounded-xl border border-slate-800 leading-relaxed select-all">
+            <div className="p-3 bg-[#f8f9fa] border border-[#a2a9b1] rounded-xs text-xs font-mono text-slate-800 leading-relaxed select-all">
               {verbete.citacaoAbnt}
+            </div>
+            <p className="text-[11px] text-slate-500 mt-1 italic">
+              Formato em conformidade com as normas da ABNT NBR 6023 para documentos eletrônicos e enciclopédias online.
             </p>
           </section>
 
           {/* ======================================================== */}
-          {/* REFERÊNCIAS BIBLIOGRÁFICAS */}
+          {/* SEÇÃO: REFERÊNCIAS CIENTÍFICAS E BIBLIOGRAFIA */}
           {/* ======================================================== */}
-          <section className="bg-slate-800/40 border border-slate-700/60 rounded-2xl p-6">
-            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">
-              Referências Científicas e Bibliografia Consultada
-            </h3>
-            <ul className="space-y-3">
+          <section id="referencias" className="mt-8 pt-4 border-t border-[#a2a9b1]">
+            <h2 className="text-xl font-serif font-normal text-slate-900 border-b border-slate-300 pb-1 mb-3">
+              Referências
+            </h2>
+            <ol className="list-decimal list-inside space-y-2 text-xs text-slate-700 leading-relaxed">
               {verbete.referencias.map((ref, idx) => (
-                <li key={idx} className="text-xs text-slate-300 font-mono leading-relaxed pl-3 border-l-2 border-slate-600">
+                <li key={idx} className="pl-1">
                   <strong>{ref.author}</strong>. <em>{ref.title}</em>. {ref.source}, {ref.year}.
                   {ref.doiOrUrl && (
                     <a
                       href={ref.doiOrUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-cyan-400 hover:underline ml-1 inline-flex items-center gap-1"
+                      className="text-[#0645ad] hover:underline ml-1.5 inline-flex items-center gap-0.5"
                     >
-                      <span>[Acessar Fonte]</span>
+                      <span>[link externo]</span>
                       <ExternalLink className="w-2.5 h-2.5" />
                     </a>
                   )}
                 </li>
               ))}
-            </ul>
+            </ol>
           </section>
-        </div>
 
-        {/* Rodapé de Navegação */}
-        <div className="mt-12 pt-6 border-t border-slate-700/80 flex items-center justify-between">
+          {/* Rodapé Interno do Artigo */}
+          <footer className="mt-10 pt-4 border-t border-[#a2a9b1] text-xs text-slate-500 flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <span>Esta página foi editada pela última vez em {verbete.dataAtualizacao}.</span>
+            </div>
+            <div>
+              <span>Conteúdo disponibilizado sob Diretrizes Éticas e Formativas ESDHUBEM.</span>
+            </div>
+          </footer>
+        </article>
+
+        {/* ======================================================== */}
+        {/* BARRA DE NAVEGAÇÃO INFERIOR */}
+        {/* ======================================================== */}
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-300">
           <button
             onClick={onBack}
-            className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-750 text-slate-300 font-bold text-xs sm:text-sm border border-slate-700 transition-all cursor-pointer flex items-center gap-2"
+            className="px-4 py-2 bg-white hover:bg-slate-100 border border-[#a2a9b1] text-slate-800 text-xs sm:text-sm font-semibold rounded-xs transition-colors cursor-pointer inline-flex items-center gap-2"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft className="w-4 h-4 text-slate-600" />
             <span>Retornar ao Índice da Enciclowiki</span>
           </button>
 
-          <button
-            onClick={() => onNavigate('diretrizes-pedagogicas')}
-            className="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs sm:text-sm transition-all cursor-pointer shadow-lg shadow-cyan-500/25 flex items-center gap-2"
-          >
-            <GraduationCap className="w-4 h-4 text-slate-950" />
-            <span>Diretrizes Pedagógicas</span>
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => onNavigate('diretrizes-pedagogicas')}
+              className="px-4 py-2 bg-[#0645ad] hover:bg-[#0b0080] text-white text-xs sm:text-sm font-semibold rounded-xs transition-colors cursor-pointer inline-flex items-center gap-1.5 shadow-2xs"
+            >
+              <GraduationCap className="w-4 h-4" />
+              <span>Diretrizes Pedagógicas & Autoria</span>
+            </button>
+          </div>
         </div>
+
       </div>
     </div>
   );
