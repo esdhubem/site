@@ -41,6 +41,8 @@ import { PerguntasFrequentesPage } from './components/PerguntasFrequentesPage';
 import { CartaAbertaPage } from './components/CartaAbertaPage';
 import { ModalidadesFormacaoPage } from './components/ModalidadesFormacaoPage';
 import { DiretrizesAvaliacaoManuscritosPage } from './components/DiretrizesAvaliacaoManuscritosPage';
+import { EnciclowikiPage } from './components/EnciclowikiPage';
+import { EnciclowikiArticlePage } from './components/EnciclowikiArticlePage';
 import { CATEGORIES_DATA, COURSES_DATA } from './data/coursesData';
 import { BLOG_POSTS } from './data/blogData';
 import { ACADEMIC_ARTICLES } from './data/artigosData';
@@ -61,8 +63,9 @@ import {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<
-    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'modalidades-formacao' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao' | 'regras-certificacao-merito' | 'diretrizes-pedagogicas' | 'diretrizes-protecao-autoria' | 'diretrizes-avaliacao-manuscritos' | 'podcasts' | 'diretrizes-publicacao-parcerias' | 'sobre-nos' | 'gerador-abnt' | 'perguntas-frequentes' | 'carta-aberta'
+    'home' | 'sala-de-aula' | 'curso-detalhe' | 'categorias' | 'categoria-detalhe' | 'informacoes-legais' | 'modalidades-formacao' | 'politicas' | 'politica-detalhe' | 'livraria' | 'blog' | 'blog-post' | 'aplicativos' | 'artigos' | 'artigo-detalhe' | 'corpo-docente' | 'direitos-aluno' | 'politica-pagamento' | 'secretaria-documentacao' | 'regras-certificacao-merito' | 'diretrizes-pedagogicas' | 'diretrizes-protecao-autoria' | 'diretrizes-avaliacao-manuscritos' | 'podcasts' | 'diretrizes-publicacao-parcerias' | 'sobre-nos' | 'gerador-abnt' | 'perguntas-frequentes' | 'carta-aberta' | 'enciclowiki' | 'enciclowiki-verbete'
   >('home');
+  const [activeVerbeteId, setActiveVerbeteId] = useState<string>('mapa-mental');
   const [activeCategorySlug, setActiveCategorySlug] = useState<string>('desenvolvimento-nas-empresas');
   const [activePolicyId, setActivePolicyId] = useState<string>('privacidade');
   const [activePortalCourseId, setActivePortalCourseId] = useState<string>('hc-1');
@@ -82,11 +85,25 @@ export default function App() {
     const params = new URLSearchParams(window.location.search);
     const hash = window.location.hash.replace('#', '');
 
+    const verbeteId = params.get('verbete') || (params.get('page') === 'enciclowiki-verbete' ? params.get('id') : null);
     const postId = params.get('post') || params.get('id') || (params.get('page') === 'blog-post' ? params.get('id') : null);
     const artigoId = params.get('artigo') || params.get('article');
     const cursoId = params.get('curso') || params.get('course');
     const categoriaId = params.get('categoria') || params.get('category');
     const pagina = params.get('pagina') || params.get('page') || params.get('p') || hash;
+
+    if (verbeteId) {
+      setActiveVerbeteId(verbeteId);
+      setCurrentPage('enciclowiki-verbete');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
+    }
+
+    if (pagina === 'enciclowiki' || pagina === 'wiki' || pagina === 'enciclopedia') {
+      setCurrentPage('enciclowiki');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      return;
+    }
 
     if (postId) {
       const post = BLOG_POSTS.find(p => p.id === postId);
@@ -355,6 +372,20 @@ export default function App() {
 
     if (sectionId === 'blog') {
       setCurrentPage('blog');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (sectionId === 'enciclowiki' || sectionId === 'wiki' || sectionId === 'enciclopedia') {
+      setCurrentPage('enciclowiki');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (sectionId === 'enciclowiki-verbete' || sectionId.startsWith('verbete:')) {
+      const vId = sectionId.startsWith('verbete:') ? sectionId.replace('verbete:', '') : 'mapa-mental';
+      setActiveVerbeteId(vId);
+      setCurrentPage('enciclowiki-verbete');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
@@ -1038,6 +1069,36 @@ export default function App() {
           <DiretrizesAvaliacaoManuscritosPage
             onBackToHome={() => {
               setCurrentPage('home');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onNavigate={handleNavigate}
+          />
+        </main>
+      )}
+
+      {currentPage === 'enciclowiki' && (
+        <main className="flex-1">
+          <EnciclowikiPage
+            onSelectVerbete={(id) => {
+              setActiveVerbeteId(id);
+              setCurrentPage('enciclowiki-verbete');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onNavigate={handleNavigate}
+          />
+        </main>
+      )}
+
+      {currentPage === 'enciclowiki-verbete' && (
+        <main className="flex-1">
+          <EnciclowikiArticlePage
+            verbeteId={activeVerbeteId}
+            onBack={() => {
+              setCurrentPage('enciclowiki');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onSelectVerbete={(id) => {
+              setActiveVerbeteId(id);
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             onNavigate={handleNavigate}

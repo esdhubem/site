@@ -397,7 +397,7 @@ export const Header: React.FC<HeaderProps> = ({
               <div className="relative group py-2">
                 <button
                   className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer flex items-center gap-1.5 ${
-                    ['artigos', 'artigo-detalhe', 'blog', 'blog-post', 'podcasts'].includes(currentPage)
+                    ['artigos', 'artigo-detalhe', 'blog', 'blog-post', 'podcasts', 'enciclowiki', 'enciclowiki-verbete'].includes(currentPage)
                       ? 'text-white font-bold bg-blue-600/30 border-b-2 border-blue-400'
                       : 'text-white/80 hover:text-white hover:bg-white/5'
                   }`}
@@ -410,6 +410,26 @@ export const Header: React.FC<HeaderProps> = ({
                 {/* Dropdown Card */}
                 <div className="absolute left-0 top-full pt-1 hidden group-hover:block z-50 min-w-[280px] animate-in fade-in slide-in-from-top-1 duration-150">
                   <div className="bg-[#0A1128] border border-blue-900/80 rounded-2xl p-2 shadow-2xl space-y-1">
+                    <button
+                      onClick={() => onNavigate('enciclowiki')}
+                      className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center justify-between cursor-pointer ${
+                        currentPage === 'enciclowiki' || currentPage === 'enciclowiki-verbete'
+                          ? 'bg-blue-600/20 text-blue-300 font-bold'
+                          : 'text-slate-200 hover:text-white hover:bg-blue-900/30'
+                      }`}
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <BookOpen className="w-4 h-4 text-emerald-400 shrink-0" />
+                        <div>
+                          <div className="font-semibold text-xs flex items-center gap-1.5">
+                            <span>Enciclowiki</span>
+                            <span className="bg-emerald-500/20 text-emerald-300 text-[9px] font-black px-1.5 py-0.2 rounded-full border border-emerald-500/30">NOVO</span>
+                          </div>
+                          <div className="text-[10px] text-slate-400">Enciclopédia viva de verbetes</div>
+                        </div>
+                      </div>
+                    </button>
+
                     <button
                       onClick={() => onNavigate('artigos')}
                       className={`w-full text-left px-3 py-2.5 rounded-xl transition-all flex items-center gap-2.5 cursor-pointer ${
@@ -640,6 +660,13 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Grupo 3: Conteúdo & Publicações */}
           <div className="pt-2 border-t border-slate-700/80 space-y-1">
             <span className="text-[11px] font-extrabold text-blue-400 uppercase tracking-wider block px-3">Conteúdo & Publicações</span>
+            <button onClick={() => { onNavigate('enciclowiki'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-emerald-300 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <BookOpen className="w-4 h-4 text-emerald-400" />
+                <span>Enciclowiki (Enciclopédia)</span>
+              </div>
+              <span className="text-[9px] bg-emerald-500/20 text-emerald-300 px-1.5 py-0.5 rounded font-black border border-emerald-500/30">NOVO</span>
+            </button>
             <button onClick={() => { onNavigate('artigos'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-sky-300">Repositório de Artigos</button>
             <button onClick={() => { onNavigate('blog'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-blue-200">Postagens de Blog</button>
             <button onClick={() => { onNavigate('podcasts'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-slate-200 hover:bg-white/10 flex items-center gap-2">
