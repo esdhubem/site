@@ -345,26 +345,26 @@ export const BLOG_POSTS: BlogPost[] = [
             <tr class="hover:bg-slate-50/70">
               <th scope="row" class="py-3.5 px-5 font-bold text-amber-800 whitespace-nowrap">🥉 Bronze</th>
               <td class="py-3.5 px-5 italic">Eu aprendi.</td>
-              <td class="py-3.5 px-5">Produção de conclusão de curso livre</td>
-              <td class="py-3.5 px-5">Certificado oficial com carga horária e código de validação</td>
+              <td class="py-3.5 px-5">Tríade de fixação (Mapa + Síntese 500-800 palavras + Áudio)</td>
+              <td class="py-3.5 px-5">Avaliação pedagógica interna e Certificado Oficial (sem publicação externa)</td>
             </tr>
             <tr class="hover:bg-slate-50/70">
               <th scope="row" class="py-3.5 px-5 font-bold text-slate-700 whitespace-nowrap">🥈 Prata</th>
-              <td class="py-3.5 px-5 italic">Eu escrevi.</td>
-              <td class="py-3.5 px-5">Artigo temático e reflexivo</td>
-              <td class="py-3.5 px-5">Publicação no Blog ESDHUBEM com link permanente</td>
+              <td class="py-3.5 px-5 italic">Eu estruturei o conceito.</td>
+              <td class="py-3.5 px-5">Verbete canônico na Enciclowiki (1ª Prateleira)</td>
+              <td class="py-3.5 px-5">Publicação na Enciclowiki ESDHUBEM com perfil de autor(a) e citação ABNT</td>
             </tr>
             <tr class="hover:bg-slate-50/70">
               <th scope="row" class="py-3.5 px-5 font-bold text-yellow-700 whitespace-nowrap">🥇 Ouro</th>
-              <td class="py-3.5 px-5 italic">Eu pesquisei.</td>
-              <td class="py-3.5 px-5">Manuscrito de Conclusão de Curso (MCC)</td>
-              <td class="py-3.5 px-5">Repositório acadêmico internacional com identificador digital (DOI)</td>
+              <td class="py-3.5 px-5 italic">Eu comuniquei com alcance.</td>
+              <td class="py-3.5 px-5">Artigo de Blog temático com SEO (2ª Prateleira)</td>
+              <td class="py-3.5 px-5">Publicação no Blog Oficial ESDHUBEM com otimização para motores de busca</td>
             </tr>
             <tr class="hover:bg-slate-50/70">
               <th scope="row" class="py-3.5 px-5 font-bold text-cyan-700 whitespace-nowrap">💎 Diamante</th>
-              <td class="py-3.5 px-5 italic">Eu criei uma obra.</td>
-              <td class="py-3.5 px-5">Obra completa ou livro autoral</td>
-              <td class="py-3.5 px-5">Registro formal, revisão editorial e publicação</td>
+              <td class="py-3.5 px-5 italic">Eu investiguei em profundidade.</td>
+              <td class="py-3.5 px-5">Artigo Investigativo de Alto Impacto (3ª Prateleira)</td>
+              <td class="py-3.5 px-5">Publicação no Repositório de Artigos com DOI Internacional vitalício (Zenodo/OSF)</td>
             </tr>
           </tbody>
         </table>

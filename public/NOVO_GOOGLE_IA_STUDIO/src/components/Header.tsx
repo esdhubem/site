@@ -475,17 +475,7 @@ export const Header: React.FC<HeaderProps> = ({
                       </div>
                     </button>
 
-                    <button
-                      onClick={() => onNavigate('livraria')}
-                      className="w-full text-left px-3 py-2.5 rounded-xl text-slate-200 hover:text-white hover:bg-blue-900/30 transition-all flex items-center gap-2.5 cursor-pointer"
-                    >
-                      <BookOpen className="w-4 h-4 text-sky-400 shrink-0" />
-                      <div>
-                        <div className="font-semibold text-xs">Livros</div>
-                        <div className="text-[10px] text-slate-400">Obras Diamante disponíveis para leitura</div>
-                      </div>
-                    </button>
-                  </div>
+                    </div>
                 </div>
               </div>
 
@@ -672,10 +662,6 @@ export const Header: React.FC<HeaderProps> = ({
             <button onClick={() => { onNavigate('podcasts'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-slate-200 hover:bg-white/10 flex items-center gap-2">
               <Headphones className="w-4 h-4 text-blue-400" />
               <span>Podcasts & Ensaios Sonoros</span>
-            </button>
-            <button onClick={() => { onNavigate('livraria'); setMobileMenuOpen(false); }} className="w-full text-left px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 text-sky-300 flex items-center gap-2">
-              <BookOpen className="w-4 h-4 text-sky-400" />
-              <span>Livros (Obras Diamante)</span>
             </button>
           </div>
 

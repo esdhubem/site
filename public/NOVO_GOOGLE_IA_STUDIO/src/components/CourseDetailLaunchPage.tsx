@@ -97,20 +97,20 @@ export const COURSE_LEVELS: CourseLevel[] = [
     },
     regularPrice: 69.90,
     launchPrice: 39.90,
-    tagline: 'Ideal para complementação rápida e validação de horas acadêmicas.',
-    scopeStudent: '1 Mapa Mental estruturado + 1 Texto à mão (~500 palavras) + 1 Áudio de 1 min.',
+    tagline: 'Ideal para validação rápida de horas complementares com avaliação pedagógica da Tríade.',
+    scopeStudent: 'Tríade Base (Mapa Mental + Síntese conceitual de 500 a 800 palavras + Áudio de 1 min). Sem publicação pública.',
     deliverablesSchool: [
-      'Avaliação pedagógica da Tríade',
-      'Certificado Oficial Bronze (20h) com QR Code e Hash Criptográfico',
+      'Avaliação pedagógica da Tríade e verificação de aprendizagem',
+      'Certificado Oficial Bronze (20h) com QR Code e Hash de Autenticidade',
       'Amparo legal pleno na LDB nº 9.394/96 e Decreto nº 5.154/04'
     ],
-    repository: 'Portal de Verificação ESDHUBEM',
+    repository: 'Portal de Verificação ESDHUBEM (Arquivo Interno)',
     repositoryCost: '100% Incluso / Gratuito'
   },
   {
     id: 'prata',
     name: '2º Nível • PRATA',
-    badge: 'Mais Escolhido • Autoria Blog',
+    badge: '1ª Prateleira • Verbete Enciclowiki',
     hours: 40,
     hoursLabel: '40 Horas',
     iconEmoji: '🥈',
@@ -125,21 +125,21 @@ export const COURSE_LEVELS: CourseLevel[] = [
     regularPrice: 147.00,
     launchPrice: 79.00,
     isPopular: true,
-    tagline: 'Carga padrão das faculdades + seu artigo publicado e registrado na web.',
-    scopeStudent: 'Tríade Base + Artigo de Blog/Ensaio (3 a 5 páginas / 1.000 a 1.500 palavras).',
+    tagline: 'Carga padrão das faculdades + seu verbete canônico publicado na Enciclowiki.',
+    scopeStudent: 'Tríade Base + Verbete Canônico Estruturado (500 a 800 palavras, mapa mental e citação ABNT).',
     deliverablesSchool: [
       'Certificado Oficial Prata com Carga Horária de 40 Horas',
-      'Leitura crítica textual e sugestões de estilo',
-      'Publicação formal no Blog Oficial da ESDHUBEM com seu nome de autor(a)',
-      'Depósito aberto e indexação permanente no OSF'
+      'Revisão editorial e formatação no padrão canônico da Enciclowiki',
+      'Publicação na 1ª Prateleira (Enciclowiki da ESDHUBEM) com seu perfil e backlink',
+      'Indexação amigável no Google para consolidação de autoridade conceitual'
     ],
-    repository: 'OSF (Open Science Framework)',
+    repository: 'Enciclowiki Oficial ESDHUBEM (1ª Prateleira)',
     repositoryCost: '100% Gratuito (Sem taxas extras)'
   },
   {
     id: 'ouro',
     name: '3º Nível • OURO',
-    badge: 'Trilha Científica com DOI',
+    badge: '2ª Prateleira • Artigo de Blog SEO',
     hours: 80,
     hoursLabel: '80 Horas',
     iconEmoji: '🥇',
@@ -153,21 +153,21 @@ export const COURSE_LEVELS: CourseLevel[] = [
     },
     regularPrice: 350.00,
     launchPrice: 149.00,
-    tagline: 'Pontuação de currículo acadêmico com DOI Internacional vitalício.',
-    scopeStudent: 'Tríade Base + Artigo Científico/Paper (8 a 15 páginas) estruturado na ABNT.',
+    tagline: 'Posicionamento em motores de busca com artigo temático e otimização SEO.',
+    scopeStudent: 'Tríade Base + Artigo de Blog com SEO (800 a 1.500 palavras com H2/H3 e palavras-chave).',
     deliverablesSchool: [
       'Certificado Oficial Ouro com Carga Horária de 80 Horas',
-      'Copidesque aprofundado, revisão crítica estrutural e adequação ABNT',
-      'Submissão e depósito internacional no Zenodo (CERN / União Europeia)',
-      'Geração de DOI Internacional vitalício para citação acadêmica'
+      'Copidesque, revisão de legibilidade e otimização para SEO on-page',
+      'Publicação na 2ª Prateleira (Blog Oficial da ESDHUBEM) com créditos autorais',
+      'Indexação orgânica no Google com meta-dados otimizados'
     ],
-    repository: 'Zenodo (CERN / OpenAIRE da União Europeia)',
-    repositoryCost: '100% Gratuito (DOI vitalício)'
+    repository: 'Blog Oficial ESDHUBEM (2ª Prateleira)',
+    repositoryCost: '100% Gratuito (Sem taxas extras)'
   },
   {
     id: 'diamante',
     name: '4º Nível • DIAMANTE',
-    badge: 'Obra Autoral Completa',
+    badge: '3ª Prateleira • Artigo Investigativo',
     hours: 120,
     hoursLabel: '120 Horas',
     iconEmoji: '💎',
@@ -181,16 +181,16 @@ export const COURSE_LEVELS: CourseLevel[] = [
     },
     regularPrice: 980.00,
     launchPrice: 297.00,
-    tagline: 'Formação Avançada com mentoria editorial para publicação do seu Livro.',
-    scopeStudent: 'Tríade Base + Livro Autoral Completo (~50 páginas divididas em capítulos temáticos).',
+    tagline: 'Pesquisa aprofundada de alto impacto com DOI Internacional vitalício.',
+    scopeStudent: 'Tríade Base + Artigo Investigativo de Alto Impacto (2.500 a 5.000 palavras com rigor metodológico e referências).',
     deliverablesSchool: [
       'Certificado Oficial Diamante com Carga Horária de 120 Horas (Formação Avançada)',
-      'Mentoria editorial e leitura crítica de toda a estrutura dos capítulos',
-      'Diagramação profissional no formato E-book/Livro digital',
-      'Depósito aberto de preservação no OSF + Guia com passo a passo para registro FBN'
+      'Mentoria editorial crítica e revisão acadêmica aprofundada',
+      'Publicação na 3ª Prateleira (Repositório Oficial de Artigos ESDHUBEM)',
+      'Submissão com DOI Internacional vitalício (Zenodo / Open Science Framework)'
     ],
-    repository: 'OSF (Gratuito) + Biblioteca Nacional (Opcional)',
-    repositoryCost: 'OSF 100% Grátis | Emolumentos FBN/CBL à parte pelo autor'
+    repository: 'Repositório de Artigos + DOI (Zenodo / OSF - 3ª Prateleira)',
+    repositoryCost: 'Zenodo / OSF 100% Grátis (DOI vitalício)'
   }
 ];
 

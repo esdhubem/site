@@ -103,10 +103,10 @@ export const EnciclowikiPage: React.FC<EnciclowikiPageProps> = ({
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 text-center">
           
           {/* Badge Oficial */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs sm:text-sm font-bold tracking-wide mb-5 shadow-lg shadow-amber-950/40 backdrop-blur-md">
-            <Award className="w-4 h-4 text-amber-400" />
-            <span>Espaço Autoral dos Alunos Nível Bronze</span>
-            <span className="bg-amber-500/30 text-[10px] px-2 py-0.5 rounded font-black text-amber-200">MÉRITO CONCEITUAL</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-400/15 border border-slate-300/30 text-slate-200 text-xs sm:text-sm font-bold tracking-wide mb-5 shadow-lg shadow-blue-950/40 backdrop-blur-md">
+            <Award className="w-4 h-4 text-slate-300" />
+            <span>1ª Prateleira de Publicação • Autores Nível Prata</span>
+            <span className="bg-slate-300/20 text-[10px] px-2 py-0.5 rounded font-black text-slate-100">SELOS DE AUTORIA</span>
           </div>
 
           {/* Título H1 */}
@@ -120,7 +120,7 @@ export const EnciclowikiPage: React.FC<EnciclowikiPageProps> = ({
           </p>
 
           <p className="text-xs sm:text-sm text-slate-300/85 max-w-2xl mx-auto leading-relaxed mb-8">
-            A enciclopédia livre e participativa da ESDHUBEM onde estudantes certificados com o <strong>Selo Bronze</strong> publicam verbetes canônicos concisos sob rigor ético, método investigativo e fundamentação filosófica clássica.
+            A enciclopédia viva da ESDHUBEM onde estudantes que avançaram para o <strong>Selo Prata</strong> publicam verbetes canônicos estruturados (500 a 800 palavras) amigáveis ao Google (SEO), sob rigor ético, método investigativo e fundamentação epistemológica.
           </p>
 
           {/* Barra de Busca Proeminente */}
@@ -307,9 +307,9 @@ export const EnciclowikiPage: React.FC<EnciclowikiPageProps> = ({
                         </span>
                       </div>
 
-                      <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-100/90 text-amber-900 border border-amber-300 flex items-center gap-1 shadow-2xs">
-                        <Award className="w-3 h-3 text-amber-700" />
-                        <span>Aluno Bronze</span>
+                      <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-200 text-slate-800 border border-slate-300 flex items-center gap-1 shadow-2xs">
+                        <Award className="w-3 h-3 text-slate-600" />
+                        <span>Aluno Prata</span>
                       </span>
                     </div>
 

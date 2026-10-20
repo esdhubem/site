@@ -461,16 +461,28 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-200 bg-white">
+                    <tr className="hover:bg-amber-50/30 transition-colors">
+                      <th scope="row" className="py-4 px-4 font-bold text-slate-900 flex items-center gap-2">
+                        <span className="text-xl">🥉</span>
+                        <span>Bronze</span>
+                      </th>
+                      <td className="py-4 px-4 text-slate-700 font-medium">
+                        Tríade de Fixação Pedagógica (Avaliação Interna)
+                      </td>
+                      <td className="py-4 px-4 text-slate-600 leading-relaxed">
+                        Registro de envio e arquivamento interno no sistema acadêmico + Certificado Bronze de Conclusão (sem publicação externa)
+                      </td>
+                    </tr>
                     <tr className="hover:bg-slate-50/80 transition-colors">
                       <th scope="row" className="py-4 px-4 font-bold text-slate-900 flex items-center gap-2">
                         <span className="text-xl">🥈</span>
                         <span>Prata</span>
                       </th>
                       <td className="py-4 px-4 text-slate-700 font-medium">
-                        Postagem em blog
+                        1ª Prateleira: Verbete na Enciclowiki Oficial
                       </td>
                       <td className="py-4 px-4 text-slate-600 leading-relaxed">
-                        Registro de envio + nome visível + link permanente + data pública
+                        Registro de envio + nome e profissão destacados + URL pública canônica própria + dados estruturados Schema.org
                       </td>
                     </tr>
                     <tr className="hover:bg-amber-50/40 transition-colors">
@@ -479,10 +491,10 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
                         <span>Ouro</span>
                       </th>
                       <td className="py-4 px-4 text-slate-700 font-medium">
-                        Repositório acadêmico
+                        2ª Prateleira: Postagem no Blog com SEO
                       </td>
                       <td className="py-4 px-4 text-slate-600 leading-relaxed">
-                        Todos os elementos anteriores + identificador digital (DOI) em banco de dados internacional
+                        Todos os elementos anteriores + biografia do autor + indexação orgânica em motores de busca + registro de autoria no OSF
                       </td>
                     </tr>
                     <tr className="hover:bg-cyan-50/40 transition-colors">
@@ -491,21 +503,21 @@ export const DiretrizesProtecaoAutoriaPage: React.FC<DiretrizesProtecaoAutoriaPa
                         <span>Diamante</span>
                       </th>
                       <td className="py-4 px-4 text-slate-700 font-medium">
-                        Livro ou artigo em periódico
+                        3ª Prateleira: Artigo Investigativo de Alto Impacto
                       </td>
                       <td className="py-4 px-4 text-slate-600 leading-relaxed">
-                        Todos os elementos anteriores + registro formal + revisão de validação
+                        Todos os elementos anteriores + publicação no Repositório de Artigos + identificador digital permanente (DOI) no Zenodo/OSF
                       </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-              {/* Aviso Importante sobre DOI e Nível Prata */}
+              {/* Aviso Importante sobre DOI */}
               <aside className="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-xs sm:text-sm leading-relaxed flex items-start gap-3">
                 <Info className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" />
                 <div>
-                  <strong>⚠️ Importante:</strong> Os textos publicados no nível Prata (blog) não recebem DOI, por se tratar de identificador exclusivo de trabalhos depositados em repositórios científicos. Isto não significa ausência de proteção — todos os trabalhos contam com registro de envio, nome visível, endereço próprio e data pública, amparados pela Lei nº 9.610/1998.
+                  <strong>⚠️ Importante sobre o DOI:</strong> Os textos publicados nos níveis Prata (Enciclowiki) e Ouro (Blog) não recebem DOI, por se tratar de identificador exclusivo de produções investigativas e científicas depositadas em repositórios internacionais (Nível Diamante). Isto não significa ausência de proteção — todos os trabalhos contam com registro de recebimento, nome visível, endereço permanente próprio e data pública, integralmente amparados pela Lei nº 9.610/1998.
                 </div>
               </aside>
             </div>

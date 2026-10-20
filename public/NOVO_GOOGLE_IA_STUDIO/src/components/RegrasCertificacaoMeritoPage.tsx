@@ -82,7 +82,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
             </h1>
 
             <p className="text-white text-base sm:text-lg font-normal leading-relaxed text-slate-100">
-              Valorize sua jornada de estudos! Na ESDHUBEM, além da conclusão do curso, você pode elevar a categoria do seu certificado conquistando Selos de Autoria (Bronze, Prata, Ouro e Diamante) através da publicação de verbetes na Wiki Oficial, artigos de blog, manuscritos com registro DOI ou Livros na Biblioteca Nacional.
+              Valorize sua jornada de estudos! Na ESDHUBEM, a conclusão do curso garante seu <strong>Certificado Bronze</strong> por meio da entrega da Tríade Pedagógica no ambiente interno (sem publicação externa). Para quem deseja ir além e construir autoridade no mercado, oferecemos três prateleiras de publicação editorial no site da escola: o <strong>Verbete amigável do Google na Enciclowiki (Prata)</strong>, o <strong>Artigo de Blog com SEO (Ouro)</strong> e o <strong>Artigo Investigativo de Alto Impacto com DOI (Diamante)</strong>.
             </p>
           </div>
 
@@ -90,21 +90,21 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
           <div className="bg-[#011049]/90 border border-blue-800/80 p-6 rounded-2xl shadow-xl max-w-sm w-full space-y-4 shrink-0 backdrop-blur-xs">
             <div className="text-xs font-bold text-[#FFC72C] uppercase tracking-wider flex items-center gap-2">
               <Award className="w-4 h-4 text-[#FFC72C]" />
-              <span>4 Categorias de Mérito</span>
+              <span>4 Níveis & 3 Prateleiras</span>
             </div>
             
             <div className="grid grid-cols-2 gap-2 text-xs">
               <div className="p-2.5 rounded-xl bg-amber-900/30 border border-amber-600/40 text-amber-300 font-bold flex items-center gap-2">
-                <span className="text-base">🥉</span> Bronze
+                <span className="text-base">🥉</span> Bronze (Interno)
               </div>
               <div className="p-2.5 rounded-xl bg-slate-700/50 border border-slate-500/40 text-slate-200 font-bold flex items-center gap-2">
-                <span className="text-base">🥈</span> Prata
+                <span className="text-base">🥈</span> Prata (Verbete)
               </div>
               <div className="p-2.5 rounded-xl bg-amber-500/20 border border-amber-400/50 text-amber-400 font-bold flex items-center gap-2">
-                <span className="text-base">🥇</span> Ouro
+                <span className="text-base">🥇</span> Ouro (Blog SEO)
               </div>
               <div className="p-2.5 rounded-xl bg-cyan-500/20 border border-cyan-400/50 text-cyan-300 font-bold flex items-center gap-2">
-                <span className="text-base">💎</span> Diamante
+                <span className="text-base">💎</span> Diamante (DOI)
               </div>
             </div>
 
@@ -182,12 +182,12 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-slate-900">Nível Bronze: Aproveitamento Básico</h3>
-                      <span className="text-sm text-amber-800 font-semibold">Tríade da Organização, Assimilação e Comunicação & Verbete Enciclopédico na Wiki</span>
+                      <span className="text-sm text-amber-800 font-semibold">Tríade Pedagógica de Fixação (Avaliação Interna)</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 flex-wrap">
                     <span className="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold border border-amber-300">
-                      Complexidade: Baixa (Fixação)
+                      Conclusão de Curso
                     </span>
                     <span className="bg-amber-800 text-amber-100 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">
                       Selo 🥉 Bronze
@@ -198,35 +198,35 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                 {/* Quadro Único Explicativo Completo */}
                 <div className="p-5 sm:p-6 rounded-2xl bg-amber-50/70 border border-amber-200/80 text-sm space-y-4 text-slate-800">
                   <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                    Focado na consolidação prática do aprendizado através da <strong>metodologia pedagógica da Tríade da Organização, Assimilação e Comunicação</strong> da ESDHUBEM. O aluno assiste às aulas completas e valida sua absorção entregando a Tríade da Organização, Assimilação e Comunicação para publicação na <strong>Wiki da Escola</strong>:
+                    Focado na consolidação prática do aprendizado através da <strong>metodologia da Tríade da Organização, Assimilação e Comunicação</strong> da ESDHUBEM. O aluno assiste às aulas completas e valida sua absorção entregando o exercício internamente na plataforma:
                   </p>
                   
                   <div className="space-y-2.5 pt-2 border-t border-amber-200/60">
-                    <strong className="block text-sm font-bold text-amber-950 uppercase tracking-wide">📌 Requisitos & Entregáveis:</strong>
+                    <strong className="block text-sm font-bold text-amber-950 uppercase tracking-wide">📌 Requisitos & Entregáveis Internos:</strong>
                     <ul className="space-y-2 text-sm text-slate-700 pl-1 leading-relaxed">
                       <li className="flex items-start gap-2.5">
                         <span className="text-amber-800 font-bold shrink-0 text-base">🧠</span>
-                        <span><strong>Mapa Mental do Conteúdo:</strong> Diagrama visual desenhado à mão estruturando os conceitos centrais e conexões pedagógicas do tema.</span>
+                        <span><strong>Mapa Mental do Conteúdo:</strong> Diagrama visual estruturando os conceitos centrais e conexões pedagógicas do tema.</span>
                       </li>
                       <li className="flex items-start gap-2.5">
                         <span className="text-amber-800 font-bold shrink-0 text-base">✍️</span>
-                        <span><strong>Verbete Enciclopédico (500 a 800 palavras):</strong> Texto formal e informativo escrito à mão conceituando o tema central (significado, histórico e aplicação prática).</span>
+                        <span><strong>Texto Conceitual da Tríade (500 a 800 palavras):</strong> Síntese formal respondendo às três indagações kantianas (o que posso saber, o que devo fazer, o que posso esperar) para comprovar a assimilação dos conceitos.</span>
                       </li>
                       <li className="flex items-start gap-2.5">
                         <span className="text-amber-800 font-bold shrink-0 text-base">🎙️</span>
-                        <span><strong>Áudio Explicativo de 1 Minuto:</strong> Gravação de voz de 60 segundos sintetizando oralmente o conceito com clareza (Técnica Feynman de retenção).</span>
+                        <span><strong>Áudio Explicativo de 1 Minuto:</strong> Gravação de voz de 60 segundos sintetizando oralmente o conceito com clareza (Técnica Feynman).</span>
                       </li>
                     </ul>
                   </div>
 
                   <div className="pt-3 border-t border-amber-200/60 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                     <div className="bg-white/95 p-3.5 rounded-xl border border-amber-200 text-slate-800 space-y-1 shadow-2xs">
-                      <strong className="block text-xs text-amber-900 uppercase font-bold tracking-wider">📍 Destino da Publicação:</strong>
-                      <span className="block text-sm text-slate-700 leading-relaxed">Wiki Oficial da ESDHUBEM com registro de autoria no OSF (Open Science Framework).</span>
+                      <strong className="block text-xs text-amber-900 uppercase font-bold tracking-wider">📍 Destino da Produção:</strong>
+                      <span className="block text-sm text-slate-700 leading-relaxed"><strong>Sem publicação externa.</strong> O trabalho é arquivado no ambiente acadêmico para avaliação e emissão do certificado.</span>
                     </div>
                     <div className="bg-white/95 p-3.5 rounded-xl border border-amber-200 text-slate-800 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-amber-900 uppercase font-bold tracking-wider">📜 Certificação Emitida:</strong>
-                      <span className="block text-sm text-slate-700 leading-relaxed">Certificado Oficial com chancela de Conclusão e Selo Bronze.</span>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Certificado Oficial de Conclusão de Curso Livre com Selo Bronze.</span>
                     </div>
                   </div>
                 </div>
@@ -242,13 +242,13 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                       🥈
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-slate-900">Nível Prata: Produção de Conteúdo</h3>
-                      <span className="text-sm text-slate-600 font-semibold">Tríade da Organização, Assimilação e Comunicação + Artigo de Blog (1.200 a 2.500 palavras)</span>
+                      <h3 className="text-xl font-bold text-slate-900">Nível Prata: Verbete na Enciclowiki</h3>
+                      <span className="text-sm text-slate-600 font-semibold">1ª Prateleira: Verbete Estruturado & SEO Amigável no Google (500 a 800 palavras)</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 flex-wrap">
                     <span className="inline-block px-3 py-1 rounded-full bg-slate-200 text-slate-800 text-xs font-bold border border-slate-300">
-                      Complexidade: Média-Baixa (Divulgação)
+                      Autor de Verbete
                     </span>
                     <span className="bg-slate-700 text-slate-100 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">
                       Selo 🥈 Prata
@@ -258,26 +258,26 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
 
                 <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 text-sm space-y-4 text-slate-800">
                   <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                    O estudante entrega a <strong>Tríade da Organização, Assimilação e Comunicação</strong> do curso <strong>MAIS</strong> um artigo de blog aprofundado e estratégico de <strong>1.200 a 2.500 palavras</strong> — extensão de referência para construir autoridade temática sólida, manter alta retenção de leitura e ranquear com destaque nas primeiras posições do <strong>Google (SEO)</strong>. Publicado no Blog Oficial da ESDHUBEM com perfil de autor.
+                    Para o estudante que deseja construir autoridade no mercado! O aluno desenvolve um <strong>Verbete Enciclopédico de 500 a 800 palavras</strong> no modelo padrão oficial da ESDHUBEM (conceito direto, contexto epistemológico, mapa mental, aplicações práticas e citação ABNT), pronto para ser indexado pelo <strong>Google (SEO)</strong>.
                   </p>
 
                   <div className="space-y-2.5 pt-2 border-t border-slate-200">
-                    <strong className="block text-sm font-bold text-slate-900 uppercase tracking-wide">📌 Requisitos & Entregáveis Obrigatórios:</strong>
+                    <strong className="block text-sm font-bold text-slate-900 uppercase tracking-wide">📌 Requisitos & Entregáveis:</strong>
                     <ul className="list-disc pl-5 space-y-2 text-sm text-slate-700 leading-relaxed">
-                      <li><strong>Entrega da Tríade da Organização, Assimilação e Comunicação:</strong> Mapa mental, verbete enciclopédico para a Wiki e áudio de 1 minuto do curso.</li>
-                      <li><strong>Artigo Autoral de Blog:</strong> Redação aprofundada de <strong>1.200 a 2.500 palavras</strong> estruturada para SEO (títulos H2/H3, estudo prático e referências).</li>
-                      <li><strong>Comprovante de Registro no OSF:</strong> Registro de autoria no Open Science Framework garantindo anterioridade e titularidade.</li>
+                      <li><strong>Verbete Canônico Estruturado (500 a 800 palavras):</strong> Redação profunda com definição clara, fundamentação teórica e aplicações contemporâneas.</li>
+                      <li><strong>Infográfico ou Mapa Mental Digital:</strong> Esquema visual acompanhando o verbete.</li>
+                      <li><strong>Dados de Autoria & Referências:</strong> Nome, profissão, link para perfil/site e fontes bibliográficas de autoridade.</li>
                     </ul>
                   </div>
 
                   <div className="pt-3 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                     <div className="bg-white p-3.5 rounded-xl border border-slate-200 text-slate-800 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-slate-700 uppercase font-bold tracking-wider">📍 Destino da Publicação:</strong>
-                      <span className="block text-sm text-slate-700 leading-relaxed">Blog Oficial da ESDHUBEM com link público de autor e registro OSF.</span>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Enciclowiki Oficial da ESDHUBEM com página pública indexada no Google.</span>
                     </div>
                     <div className="bg-white p-3.5 rounded-xl border border-slate-200 text-slate-800 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-slate-700 uppercase font-bold tracking-wider">📜 Certificação Emitida:</strong>
-                      <span className="block text-sm text-slate-700 leading-relaxed">Certificado Oficial com Selo de Mérito Prata e link de autor no blog.</span>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Certificado Oficial com Selo de Mérito Prata e link do verbete.</span>
                     </div>
                   </div>
                 </div>
@@ -293,13 +293,13 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                       🥇
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-slate-900">Nível Ouro: Pesquisa & Preprint</h3>
-                      <span className="text-sm text-amber-700 font-semibold">Tríade da Organização, Assimilação e Comunicação + Manuscrito Científico / DOI</span>
+                      <h3 className="text-xl font-bold text-slate-900">Nível Ouro: Artigo de Blog com SEO</h3>
+                      <span className="text-sm text-amber-700 font-semibold">2ª Prateleira: Artigo Autoral Otimizado para Busca Orgânica (800 a 1.500 palavras)</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 flex-wrap">
                     <span className="inline-block px-3 py-1 rounded-full bg-amber-200 text-amber-900 text-xs font-bold border border-amber-300">
-                      Complexidade: Média-Alta (Pesquisa)
+                      Autor de Blog
                     </span>
                     <span className="bg-[#FFC72C] text-slate-950 text-xs font-black px-3.5 py-1 rounded-full uppercase tracking-wider">
                       Selo 🥇 Ouro
@@ -309,26 +309,26 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
 
                 <div className="p-5 sm:p-6 rounded-2xl bg-amber-50/70 border border-amber-200 text-sm space-y-4 text-slate-800">
                   <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                    O estudante entrega a <strong>Tríade da Organização, Assimilação e Comunicação</strong> do curso <strong>MAIS</strong> um Trabalho de Conclusão de Curso (TCC) estruturado ou artigo científico de investigação densa, com depósito em plataforma de repositório aberto como Zenodo (CERN) ou OSF, garantindo um código <strong>DOI (Digital Object Identifier)</strong> universal.
+                    O estudante escreve um <strong>Artigo de Blog reflexivo, técnico ou de estudo de caso (800 a 1.500 palavras)</strong>, formatado com as melhores práticas de SEO (títulos H2/H3 semânticos, palavras-chave e escaneabilidade) para atrair tráfego qualificado e consolidar sua voz profissional.
                   </p>
 
                   <div className="space-y-2.5 pt-2 border-t border-amber-200">
                     <strong className="block text-sm font-bold text-amber-950 uppercase tracking-wide">📌 Requisitos & Entregáveis Obrigatórios:</strong>
                     <ul className="list-disc pl-5 space-y-2 text-sm text-slate-700 leading-relaxed">
-                      <li><strong>Entrega da Tríade da Organização, Assimilação e Comunicação:</strong> Mapa mental, verbete enciclopédico para a Wiki e áudio de 1 minuto do curso.</li>
-                      <li><strong>Manuscrito de Pesquisa / TCC:</strong> Produção estruturada com ementa acadêmica, introdução, fundamentação teórica e metodologia.</li>
-                      <li><strong>Depósito e Atribuição de DOI:</strong> Depósito no repositório Zenodo / OSF gerando DOI permanente para citação no Currículo Lattes.</li>
+                      <li><strong>Artigo Autoral de Blog (800 a 1.500 palavras):</strong> Redação reflexiva, prática ou analítica com introdução, desenvolvimento e conclusões.</li>
+                      <li><strong>Estruturação SEO & Escaneabilidade:</strong> Subtítulos dinâmicos, síntese em tópicos e linkagem temática.</li>
+                      <li><strong>Registro no OSF:</strong> Depósito de integridade autoral no Open Science Framework.</li>
                     </ul>
                   </div>
 
                   <div className="pt-3 border-t border-amber-200 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                     <div className="bg-white p-3.5 rounded-xl border border-amber-200 text-amber-950 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-amber-900 uppercase font-bold tracking-wider">📍 Destino da Publicação:</strong>
-                      <span className="block text-sm text-slate-700 leading-relaxed">Portal de Artigos da Escola & Repositório Zenodo/OSF com registro DOI.</span>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Blog Oficial da ESDHUBEM com destaque editorial e perfil biográfico.</span>
                     </div>
                     <div className="bg-white p-3.5 rounded-xl border border-amber-200 text-amber-950 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-amber-900 uppercase font-bold tracking-wider">📜 Certificação Emitida:</strong>
-                      <span className="block text-sm text-slate-700 leading-relaxed">Certificado com Selo Ouro de Pesquisa e citação oficial do DOI.</span>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Certificado com Selo Ouro de Autoria & SEO e link de publicação.</span>
                     </div>
                   </div>
                 </div>
@@ -344,13 +344,13 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
                       💎
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-slate-900">Nível Diamante: Autorar e Construir</h3>
-                      <span className="text-sm text-cyan-700 font-semibold">Tríade da Organização, Assimilação e Comunicação + Livro Autoral (Mín. 50 páginas)</span>
+                      <h3 className="text-xl font-bold text-slate-900">Nível Diamante: Artigo Investigativo de Alto Impacto</h3>
+                      <span className="text-sm text-cyan-700 font-semibold">3ª Prateleira: Pesquisa Científica & Repositório com Registro DOI</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 flex-wrap">
                     <span className="inline-block px-3 py-1 rounded-full bg-cyan-100 text-cyan-900 text-xs font-bold border border-cyan-200">
-                      Complexidade: Alta (Autoral)
+                      Pesquisador(a)
                     </span>
                     <span className="bg-cyan-600 text-white text-xs font-black px-3.5 py-1 rounded-full uppercase tracking-wider">
                       Selo 💎 Diamante
@@ -360,27 +360,26 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
 
                 <div className="p-5 sm:p-6 rounded-2xl bg-cyan-50/70 border border-cyan-200 text-sm space-y-4 text-slate-800">
                   <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                    O nível mais elevado da escala autoral. O estudante entrega a <strong>Tríade da Organização, Assimilação e Comunicação</strong> do curso <strong>MAIS</strong> uma obra autoral completa de maior extensão (livro com no mínimo 50 páginas de conteúdo desenvolvido), com orientação estrutural e registro formal de direitos autorais.
+                    A honraria máxima de autoria da ESDHUBEM. Destinado a estudantes e pesquisadores que desenvolvem um <strong>Artigo Investigativo aprofundado (2.500 a 5.000 palavras)</strong> com metodologia científica, revisão bibliográfica e rigor analítico, depositado em repositório internacional com código <strong>DOI permanente</strong>.
                   </p>
 
                   <div className="space-y-2.5 pt-2 border-t border-cyan-200">
                     <strong className="block text-sm font-bold text-cyan-950 uppercase tracking-wide">📌 Requisitos & Entregáveis Obrigatórios:</strong>
                     <ul className="list-disc pl-5 space-y-2 text-sm text-slate-700 leading-relaxed">
-                      <li><strong>Entrega da Tríade da Organização, Assimilação e Comunicação:</strong> Mapa mental, verbete enciclopédico para a Wiki e áudio de 1 minuto do curso.</li>
-                      <li><strong>Livro Autoral Completo:</strong> Mínimo de 50 páginas de conteúdo textual desenvolvido (sem contar elementos pré e pós-textuais).</li>
-                      <li><strong>Registro de Direitos Autorais:</strong> Registro formal da obra na Fundação Biblioteca Nacional (EDA/FBN) e no OSF (Lei nº 9.610/1998).</li>
-                      <li><strong>Chancela Diamante:</strong> Destaque no Mural de Livros da ESDHUBEM e QR Code de validação no certificado.</li>
+                      <li><strong>Artigo Investigativo Completo (2.500 a 5.000 palavras):</strong> Ementa acadêmica, introdução, fundamentação teórica, metodologia e considerações finais.</li>
+                      <li><strong>Rigor Metodológico & Normas:</strong> Citações e referências em padrão ABNT/Vancouver com bibliografia primária.</li>
+                      <li><strong>Depósito e Atribuição de DOI:</strong> Depósito no repositório Zenodo (CERN) ou OSF gerando DOI para inclusão no Currículo Lattes.</li>
                     </ul>
                   </div>
 
                   <div className="pt-3 border-t border-cyan-200 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                     <div className="bg-white p-3.5 rounded-xl border border-cyan-200 text-cyan-950 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-cyan-900 uppercase font-bold tracking-wider">📍 Destino da Publicação:</strong>
-                      <span className="block text-sm text-slate-700 leading-relaxed">Mural de Livros / Livraria Digital da ESDHUBEM + Registro na OSF (Registro EDA na Biblioteca Nacional é opcional).</span>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Repositório de Artigos da ESDHUBEM e repositório internacional Zenodo com DOI.</span>
                     </div>
                     <div className="bg-white p-3.5 rounded-xl border border-cyan-200 text-cyan-950 space-y-1 shadow-2xs">
                       <strong className="block text-xs text-cyan-900 uppercase font-bold tracking-wider">📜 Certificação Emitida:</strong>
-                      <span className="block text-sm text-slate-700 leading-relaxed">Certificado de Honraria Máxima com Chancela Diamante e QR Code.</span>
+                      <span className="block text-sm text-slate-700 leading-relaxed">Certificado de Honraria Máxima com Chancela Diamante e citação oficial do DOI.</span>
                     </div>
                   </div>
                 </div>
@@ -412,7 +411,7 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
               </span>
               <h4 className="font-bold text-white text-base">Escreva seu Trabalho</h4>
               <p className="text-xs text-blue-100/80 leading-relaxed">
-                Desenvolva seu mapa mental e síntese (Bronze), artigo de blog de 1.200 a 2.500 palavras (Prata), TCC/artigo científico (Ouro) ou livro autoral (Diamante).
+                Desenvolva sua Tríade de fixação interna (Bronze), verbete para a Enciclowiki (Prata), artigo de blog com SEO (Ouro) ou artigo investigativo com DOI (Diamante).
               </p>
             </div>
 
@@ -630,19 +629,19 @@ export const RegrasCertificacaoMeritoPage: React.FC<RegrasCertificacaoMeritoPage
               <li className="flex items-start gap-3">
                 <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✅</span>
                 <span>
-                  <strong className="text-slate-900 font-bold">Certificado Bronze e Publicação do Verbete:</strong> O estudante recebe o Certificado Bronze de Conclusão de Curso (referente à participação e aproveitamento do conteúdo) e ainda assim pode ter seu Verbete publicado na Wiki ESDHUBEM;
+                  <strong className="text-slate-900 font-bold">Certificado Bronze (Aproveitamento da Formação):</strong> O estudante recebe o Certificado Bronze de Conclusão de Curso (referente à participação e avaliação interna da Tríade de fixação, sem publicação externa);
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✅</span>
                 <span>
-                  <strong className="text-slate-900 font-bold">Restituição do Valor Excedente:</strong> Caso tenha sido pago o valor correspondente ao Nível Prata, Ouro ou Diamante, o valor que excede a certificação do Nível Bronze será integralmente restituído ao aluno em até 7 dias úteis;
+                  <strong className="text-slate-900 font-bold">Restituição do Valor Excedente:</strong> Caso tenha sido contratada a publicação editorial de uma das três prateleiras superiores (Prata, Ouro ou Diamante) e o aluno decida não realizar os ajustes sugeridos, o valor que excede a certificação do Nível Bronze será integralmente restituído ao aluno em até 7 dias úteis;
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-emerald-600 font-bold shrink-0 mt-0.5">✅</span>
                 <span>
-                  <strong className="text-slate-900 font-bold">Cobrança da Taxa Bronze mesmo sem Publicação do Verbete:</strong> Caso o estudante decida não publicar nem mesmo o Verbete, ainda assim será cobrado e retido o valor do Certificado Bronze, pois a escola teve todo o trabalho pedagógico e técnico de avaliar, ler e orientar o manuscrito.
+                  <strong className="text-slate-900 font-bold">Retenção da Taxa Bronze:</strong> O valor correspondente à avaliação da Tríade e emissão do Certificado Bronze permanece retido, pois a equipe docente realizou o trabalho pedagógico de leitura, análise e orientação do exercício formativo.
                 </span>
               </li>
             </ul>

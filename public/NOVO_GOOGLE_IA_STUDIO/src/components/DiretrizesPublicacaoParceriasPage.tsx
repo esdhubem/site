@@ -1056,15 +1056,15 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     <ul className="space-y-1.5 pl-2 text-sm sm:text-base">
                       <li className="flex items-start gap-2">
                         <span>🏆</span>
-                        <span><strong>Certificado Prata:</strong> entrega um <strong>artigo de blog</strong> (1.200 a 2.500 palavras) voltado à divulgação do conhecimento e indexação orgânica (SEO) e publicação no Blog Oficial da ESDHUBEM;</span>
+                        <span><strong>Certificado Prata:</strong> entrega um <strong>verbete enciclopédico estruturado</strong> (500 a 800 palavras) amigável do Google (SEO) com definição, fundamento epistemológico e citação ABNT, publicado na Enciclowiki Oficial da ESDHUBEM;</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span>🏆</span>
-                        <span><strong>Certificado Ouro:</strong> desenvolve um <strong>artigo investigativo</strong> (2.500 a 5.000 palavras) estruturado no repositório internacional Zenodo com <strong>DOI permanente</strong> e publicação no Repositório de Artigos da ESDHUBEM;</span>
+                        <span><strong>Certificado Ouro:</strong> desenvolve um <strong>artigo autoral de blog com SEO</strong> (800 a 1.500 palavras) otimizado para os motores de busca e publicado no Blog Oficial da ESDHUBEM;</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span>🏆</span>
-                        <span><strong>Certificado Diamante:</strong> escreve uma obra integral de grande porte, um <strong>livro autoral</strong> (mínimo de 50 páginas) registrado no repositório OSF e veiculado na Livraria ESDHUBEM.</span>
+                        <span><strong>Certificado Diamante:</strong> desenvolve um <strong>artigo investigativo de alto impacto</strong> (2.500 a 5.000 palavras) estruturado no repositório internacional Zenodo com <strong>DOI permanente</strong> e publicação no Repositório de Artigos da ESDHUBEM.</span>
                       </li>
                     </ul>
                   </div>
@@ -1219,7 +1219,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                               <span>Prata</span>
                             </div>
                             <p className="text-slate-600">
-                              <strong>Artigo de Blog</strong> (1.200 a 2.500 palavras) voltado à divulgação do conhecimento e indexação orgânica (SEO) e publicação no Blog Oficial da ESDHUBEM.
+                              <strong>Verbete na Enciclowiki</strong> (500 a 800 palavras) amigável do Google (SEO) com citação ABNT e publicação na Enciclowiki Oficial da ESDHUBEM.
                             </p>
                           </div>
                           <div className="p-3 bg-white border border-amber-200 rounded-xl shadow-2xs space-y-1">
@@ -1228,7 +1228,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                               <span>Ouro</span>
                             </div>
                             <p className="text-slate-600">
-                              <strong>Artigo Investigativo</strong> (2.500 a 5.000 palavras) estruturado no repositório internacional Zenodo com DOI permanente e publicação no Repositório de Artigos da ESDHUBEM.
+                              <strong>Artigo de Blog com SEO</strong> (800 a 1.500 palavras) voltado à divulgação do conhecimento, atração orgânica e publicação no Blog Oficial da ESDHUBEM.
                             </p>
                           </div>
                           <div className="p-3 bg-white border border-cyan-200 rounded-xl shadow-2xs space-y-1">
@@ -1237,7 +1237,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                               <span>Diamante</span>
                             </div>
                             <p className="text-slate-600">
-                              <strong>Livro Autoral Completo</strong> (mínimo de 50 páginas) registrado no repositório OSF e divulgado na Livraria ESDHUBEM.
+                              <strong>Artigo Investigativo de Alto Impacto</strong> (2.500 a 5.000 palavras) estruturado no repositório internacional Zenodo com DOI permanente e publicação no Repositório de Artigos da ESDHUBEM.
                             </p>
                           </div>
                         </div>
@@ -1253,7 +1253,7 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                     </span>
                     <span className="px-3 py-1.5 rounded-lg bg-indigo-100 text-indigo-950 font-semibold border border-indigo-200 flex items-center gap-1.5">
                       <span>📍</span>
-                      <span>Publicação Oficial: Blog, Repositório DOI e Livraria ESDHUBEM</span>
+                      <span>Publicação Oficial: Enciclowiki (Prata), Blog SEO (Ouro) e Repositório DOI (Diamante)</span>
                     </span>
                     <span className="px-3 py-1.5 rounded-lg bg-amber-100 text-amber-900 font-semibold border border-amber-200 flex items-center gap-1.5">
                       <span>🏅</span>
@@ -3389,30 +3389,30 @@ export const DiretrizesPublicacaoParceriasPage: React.FC<DiretrizesPublicacaoPar
                       <tbody className="divide-y divide-slate-200 bg-white text-slate-700">
                         <tr className="hover:bg-amber-50/30">
                           <td className="py-3.5 px-4 font-bold text-amber-950 whitespace-nowrap">🥉 Bronze</td>
-                          <td className="py-3.5 px-4">Entrega a Tríade da Organização, Assimilação e Comunicação</td>
-                          <td className="py-3.5 px-4 font-medium text-slate-900">Verbete Enciclopédico (500-800 palavras) + Mapa Mental + Áudio 1 min + registro no OSF</td>
-                          <td className="py-3.5 px-4">Publicação na Wiki ESDHUBEM + Certificado com Selo Bronze</td>
+                          <td className="py-3.5 px-4">Entrega da Tríade Pedagógica de Fixação no ambiente interno</td>
+                          <td className="py-3.5 px-4 font-medium text-slate-900">Texto Conceitual (500 a 800 palavras) + Mapa Mental + Áudio 1 min</td>
+                          <td className="py-3.5 px-4">Avaliação Interna + Certificado Oficial com Selo Bronze (sem publicação externa)</td>
                           <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Bronze</td>
                         </tr>
                         <tr className="hover:bg-slate-50">
                           <td className="py-3.5 px-4 font-bold text-slate-900 whitespace-nowrap">🥈 Prata</td>
-                          <td className="py-3.5 px-4">Entrega a Tríade da Organização, Assimilação e Comunicação + Artigo de blog (1.200 a 2.500 palavras)</td>
-                          <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Organização, Assimilação e Comunicação + Artigo de Blog (SEO) + Registro OSF</td>
-                          <td className="py-3.5 px-4">Publicação no Blog Oficial ESDHUBEM + Certificado com Selo Prata</td>
+                          <td className="py-3.5 px-4">1ª Prateleira: Verbete na Enciclowiki amigável do Google (SEO)</td>
+                          <td className="py-3.5 px-4 font-medium text-slate-900">Verbete Canônico Estruturado (500 a 800 palavras) + Mapa Mental + Citação ABNT</td>
+                          <td className="py-3.5 px-4">Publicação na Enciclowiki Oficial ESDHUBEM + Certificado com Selo Prata</td>
                           <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Prata</td>
                         </tr>
                         <tr className="hover:bg-amber-50/30">
                           <td className="py-3.5 px-4 font-bold text-amber-800 whitespace-nowrap">🥇 Ouro</td>
-                          <td className="py-3.5 px-4">Entrega a Tríade da Organização, Assimilação e Comunicação + artigo investigativo estruturado no Zenodo com DOI</td>
-                          <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Organização, Assimilação e Comunicação + Artigo Investigativo + DOI Permanente</td>
-                          <td className="py-3.5 px-4">Publicação no Portal Acadêmico ESDHUBEM + Certificado Ouro com DOI</td>
+                          <td className="py-3.5 px-4">2ª Prateleira: Artigo Autoral de Blog com SEO</td>
+                          <td className="py-3.5 px-4 font-medium text-slate-900">Artigo de Blog Otimizado para Busca (800 a 1.500 palavras) + Registro OSF</td>
+                          <td className="py-3.5 px-4">Publicação no Blog Oficial ESDHUBEM + Certificado Ouro de Autoria & SEO</td>
                           <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Ouro</td>
                         </tr>
                         <tr className="hover:bg-cyan-50/30">
                           <td className="py-3.5 px-4 font-bold text-cyan-900 whitespace-nowrap">💎 Diamante</td>
-                          <td className="py-3.5 px-4">Entrega a Tríade da Organização, Assimilação e Comunicação + Livro autoral completo (mín. 50 págs) e registro na OSF</td>
-                          <td className="py-3.5 px-4 font-medium text-slate-900">Tríade da Organização, Assimilação e Comunicação + Livro Autoral + Registro na OSF (O Registro EDA na Biblioteca Nacional, é opcional)</td>
-                          <td className="py-3.5 px-4">Mural de Livros / Livraria Digital + Certificado Diamante de Honraria Máxima</td>
+                          <td className="py-3.5 px-4">3ª Prateleira: Artigo Investigativo de Alto Impacto com DOI</td>
+                          <td className="py-3.5 px-4 font-medium text-slate-900">Artigo Investigativo Estruturado (2.500 a 5.000 palavras) + DOI Permanente no Zenodo</td>
+                          <td className="py-3.5 px-4">Publicação no Repositório de Artigos ESDHUBEM + Certificado Diamante de Honraria Máxima</td>
                           <td className="py-3.5 px-4 text-slate-600 font-medium">Taxa do Certificado Diamante</td>
                         </tr>
                       </tbody>

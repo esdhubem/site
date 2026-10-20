@@ -560,7 +560,7 @@ export const SobreNosPage: React.FC<SobreNosPageProps> = ({
                 <h3 className="font-bold text-[#182333] text-lg sm:text-xl">Escala de Autoria & Registro</h3>
               </div>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-                Reconhecemos o esforço intelectual: alunos que escrevem artigos e manuscritos de conclusão podem ser publicados no Blog da escola ou no nosso repositório de artigos ou na nossa livraria.
+                Reconhecemos o esforço intelectual: alunos que avançam nos níveis de mérito podem publicar seus trabalhos em nossas 3 prateleiras de autoridade: Verbetes na Enciclowiki (Prata), Artigos de Blog com SEO (Ouro) e Artigos Investigativos com DOI no Repositório (Diamante).
               </p>
             </div>
 

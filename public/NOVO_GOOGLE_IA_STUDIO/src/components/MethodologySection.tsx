@@ -42,25 +42,25 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onSelect
               <div className="text-4xl mb-3">🥉</div>
               <h4 className="text-lg font-extrabold text-amber-800 mb-2">Bronze</h4>
               <p className="text-sm font-bold text-slate-700 italic mb-2">Eu aprendi.</p>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Produção de conclusão relacionada à formação.</p>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Tríade de fixação (500 a 800 palavras) no ambiente interno. Certificado Bronze garantido.</p>
             </div>
             <div className="relative rounded-2xl border-2 border-slate-300 bg-gradient-to-b from-slate-50 to-slate-100 p-6 text-center shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
               <div className="text-4xl mb-3">🥈</div>
               <h4 className="text-lg font-extrabold text-slate-700 mb-2">Prata</h4>
-              <p className="text-sm font-bold text-slate-700 italic mb-2">Eu escrevi.</p>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Artigo autoral publicado no Blog ESDHUBEM.</p>
+              <p className="text-sm font-bold text-slate-700 italic mb-2">Eu defini & estruturei.</p>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">1ª Prateleira: Verbete na Enciclowiki amigável do Google (SEO) com citação ABNT.</p>
             </div>
             <div className="relative rounded-2xl border-2 border-yellow-400/60 bg-gradient-to-b from-yellow-50 to-amber-50 p-6 text-center shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
               <div className="text-4xl mb-3">🥇</div>
               <h4 className="text-lg font-extrabold text-yellow-700 mb-2">Ouro</h4>
-              <p className="text-sm font-bold text-slate-700 italic mb-2">Eu pesquisei.</p>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Desenvolvimento de um Manuscrito de Conclusão de Curso — MCC.</p>
+              <p className="text-sm font-bold text-slate-700 italic mb-2">Eu ampliei & conectei.</p>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">2ª Prateleira: Artigo de Blog com SEO para rankear nos motores de busca.</p>
             </div>
             <div className="relative rounded-2xl border-2 border-cyan-300/60 bg-gradient-to-b from-cyan-50 to-sky-50 p-6 text-center shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ring-1 ring-cyan-200/50">
               <div className="text-4xl mb-3">💎</div>
               <h4 className="text-lg font-extrabold text-cyan-700 mb-2">Diamante</h4>
-              <p className="text-sm font-bold text-slate-700 italic mb-2">Eu criei uma obra.</p>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Desenvolvimento e publicação de um livro autoral.</p>
+              <p className="text-sm font-bold text-slate-700 italic mb-2">Eu investiguei a fundo.</p>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">3ª Prateleira: Artigo Investigativo de Alto Impacto com código DOI no Repositório.</p>
             </div>
           </div>
 
