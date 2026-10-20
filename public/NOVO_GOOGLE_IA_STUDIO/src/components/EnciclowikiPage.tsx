@@ -324,11 +324,6 @@ export const EnciclowikiPage: React.FC<EnciclowikiPageProps> = ({
                       <span className="text-slate-400">•</span>
                       <span className="text-slate-600 italic">{verbete.autorProfissao}</span>
                     </div>
-
-                    {/* Resumo Direto */}
-                    <p className="text-sm text-slate-700 leading-relaxed mb-5 line-clamp-3">
-                      {verbete.textoAlunoParagrafo || verbete.resumoDireto}
-                    </p>
                   </div>
 
                   <div>
